@@ -34,6 +34,15 @@
 
 /* Add a color to the active/current link */
 #topnav a.active {
-    background-color: #4CAF50;
+    background-color: black;
     color: white;
+}
+
+#name-and-position {
+    text-align:center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#intro-video {
+   margin-left:250px;
 }
