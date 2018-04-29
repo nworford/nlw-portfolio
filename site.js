@@ -9,6 +9,20 @@ function init(){
         });
     });
   
+    Array.from(document.querySelectorAll("#wireframe figure a[href^='assets']")).forEach((anchor)=> {
+        anchor.href="#";
+        anchor.addEventListener("click", function(e){
+            e.preventDefault();
+            var figure = e.target.parentElement.outerHTML.slice(0);
+            var aside = document.querySelector("aside");
+            aside.innerHTML = figure;
+            aside.className = "active";
+        });
+    });
+
+    document.querySelector("aside").addEventListener("click", (e) => {
+        e.target.className = "";
+    });
 }
 
 function smoothscroll(elem, ease=0.1){

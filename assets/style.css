@@ -3,6 +3,8 @@
     margin-top: 30px;
   }
 
+
+
 #topnav {
     background-color:rgba(255,255,255,0.75);
     position: fixed;
@@ -43,6 +45,145 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-#intro-video {
-   margin-left:250px;
+#intro-video video {
+   /* margin-left:250px; */
+   display:block;
+   margin:10px auto;
+   width:100%;
+   max-width: 480px;
+}
+
+#bio:after {
+    content:"";
+    display:table;
+    clear: both;
+}
+
+#bio img {
+    width:200px;
+    float:left;
+}
+
+#bio p {
+   
+}
+
+#wireframes {
+    text-align: center;
+    
+}
+#wireframes img {
+    width:100px;
+    
+}
+
+#wireframes figure {
+    width:100px;
+    display:inline-block;
+    margin:0;
+}
+#wireframes figure a:last-of-type{
+    display:none;
+}
+
+#projects img{
+    width:300px;
+}
+
+#homework img{
+    width:300px;
+}
+
+#accomplishments img{
+    width:300px;
+}
+
+@keyframes grow {
+    to { transform: scale(1.25, 1.25); }
+}
+#wireframes img:hover { z-index: 1; animation: grow 0.25s forwards; }
+
+aside {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,0.75);
+    display:none;
+}
+
+aside.active {
+    display:block;
+}
+
+aside figure {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background-color:white;
+    padding:5px;
+    border:2px solid black;
+}
+
+aside figure a {
+    display:block;
+    margin-bottom:10px;
+}
+
+@media (max-width: 600px) {
+
+    #topnav a{
+        display:none;
+    }
+    div { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        animation: navout 0.5s forwards;
+     }
+    div:hover { 
+        animation: navin 0.5s forwards;
+     }
+    
+    label { 
+        display: block; 
+        width: 125px; 
+        background-color: brown; 
+        text-align: right; 
+        border-radius: 0 10px 10px 0; 
+        color: white; 
+        font-weight: bold; 
+        padding: 5px;
+     }
+    
+    label input { 
+        display: none;
+     }
+    
+    nav { 
+        background-color: brown; 
+        width: 100px; 
+        padding-bottom: 25px;
+    }
+    
+    nav a { 
+        color: gold; 
+        display: block; 
+        padding: 5px 10px; 
+        text-decoration: none; 
+    }
+    
+    nav a:hover, label input:checked + nav { 
+        color: brown; background-color: gold; }
+    
+    @keyframes navin {
+        from { left: -100px; }
+          to { left: 0; }
+    }
+    @keyframes navout {
+        from { left: 0; }
+          to { left: -100px; }
+    }
 }
