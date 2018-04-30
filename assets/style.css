@@ -1,10 +1,13 @@
+/* ---------------------------------- CONTAINER-------------------------------------------------- */
 .container {
     display: flex; /* or inline-flex */
     margin-top: 30px;
+    margin-left:50px;
+    margin-right:50px;
   }
 
 
-
+/* ---------------------------------- TOPNAV -------------------------------------------------- */
 #topnav {
     background-color:rgba(255,255,255,0.75);
     position: fixed;
@@ -40,6 +43,7 @@
     color: white;
 }
 
+/* ---------------------------------- INTRO -------------------------------------------------- */
 #name-and-position {
     text-align:center;
     font-family: 'Times New Roman', Times, serif;
@@ -53,6 +57,10 @@
    max-width: 480px;
 }
 
+/* ---------------------------------- BIO-------------------------------------------------- */
+#bio {
+    
+}
 #bio:after {
     content:"";
     display:table;
@@ -60,14 +68,15 @@
 }
 
 #bio img {
-    width:200px;
+    width:250px;
     float:left;
+    margin-right:20px;
 }
 
 #bio p {
    
 }
-
+/* ---------------------------------- PORTFOLIO -------------------------------------------------- */
 #wireframes {
     text-align: center;
     
@@ -94,10 +103,24 @@
     width:300px;
 }
 
+/* ---------------------------------- ACCOMPLISHMENTS-------------------------------------------------- */
 #accomplishments img{
     width:300px;
 }
 
+
+/* ---------------------------------- FOOTER -------------------------------------------------- */
+footer {
+    text-align:center;
+    height: 40px;
+    background-color:black;
+    color:white;
+}
+
+footer p {
+    padding-top:10px;
+}
+/* ---------------------------------- HAMBURGER MENU-------------------------------------------------- */
 @keyframes grow {
     to { transform: scale(1.25, 1.25); }
 }
