@@ -6,6 +6,9 @@
     margin-right:50px;
   }
 
+.symbols {
+    width:150px;
+}
 
 /* ---------------------------------- TOPNAV -------------------------------------------------- */
 #topnav {
@@ -67,7 +70,7 @@
     clear: both;
 }
 
-#bio img {
+#self {
     width:250px;
     float:left;
     margin-right:20px;
@@ -95,18 +98,13 @@
     display:none;
 }
 
-#projects img{
-    width:300px;
-}
 
-#homework img{
+.carousel-img{
     width:300px;
 }
 
 /* ---------------------------------- ACCOMPLISHMENTS-------------------------------------------------- */
-#accomplishments img{
-    width:300px;
-}
+
 
 
 /* ---------------------------------- FOOTER -------------------------------------------------- */
@@ -119,6 +117,12 @@ footer {
 
 footer p {
     padding-top:10px;
+}
+
+/* ---------------------------------- mySlides-------------------------------------------------- */
+
+.mySlides img {
+    width:200px;
 }
 /* ---------------------------------- HAMBURGER MENU-------------------------------------------------- */
 @keyframes grow {
