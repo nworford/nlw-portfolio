@@ -1,10 +1,61 @@
 document.addEventListener("DOMContentLoaded", init);
 
+    let sliderImages = document.querySelectorAll('.slide'),
+        arrowRight = document.querySelector('#arrow-left'),
+        arrowLeft = document.querySelector("#arrow-right"),
+        current = 0;
+
+    // Clear all images
+    function reset(){
+        for(let i = 0; i < sliderImages.length; i ++){
+            sliderImages[i].style.display = "none";
+        }
+    }
+
+    //Init slider
+    function startSlide(){
+        reset();
+        sliderImages[0].style.display = "block"
+    }
+
+    //show prev
+    function slideLeft(){
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+    }
+
+    //Show next
+    function slideRight(){
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+    }
+    //Left arrow click
+    arrowLeft.addEventListener("click", function(){
+        if(current === 0){
+            current = sliderImages.length;
+        }
+        slideLeft();
+    });
+
+    //Right arrow click
+    arrowRight.addEventListener("click", function(){
+        if(current === sliderImages.length - 1){
+            current = -1;
+        }
+        slideRight();
+    });
+
+    startSlide();
+    // -------------------------====================================
+    
 function init(){	
   	
-    Array.from(document.querySelectorAll("#topnav a[href^='#']")).forEach((anchor) => {
+    Array.from(document.querySelectorAll("#topnav a[href^='#'], nav section a")).forEach((anchor) => {
         anchor.addEventListener("click", function(e){
             e.preventDefault();
+            console.log(e.target.getAttribute("href"));
             smoothscroll(e.target.getAttribute("href"), 0.2);
         });
     });
@@ -41,9 +92,6 @@ function smoothscroll(elem, ease=0.1){
     var currYposition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
     //get target y position
     var targetY = (function findYPosition(elem){
-        if ("function" === typeof elem.getBoundingClientRect){
-            return elem.getBoundingClientRect().top;
-        }
         var yPosition = 0;
         while (elem.offsetParent){
             yPosition += elem.offsetTop;
@@ -75,12 +123,13 @@ function plusDivs(n) {
 
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
+    var slides = document.getElementsByClassName("mySlides");
+    console.log("button clicked");
+    if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length} ;
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
     }
-    x[slideIndex-1].style.display = "block"; 
+    slides[slideIndex-1].style.display = "block"; 
 }
 

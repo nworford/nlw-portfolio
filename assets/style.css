@@ -1,3 +1,62 @@
+body #slider, .wrap, .slide-content {
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+    height:400px;
+    overflow-x:hidden;
+}
+
+.wrap{position:relative}
+
+.slide{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide1{background-image: url("assets/images/portfolio/portfolio-2.jpg")}
+.slide2{background-image: url("assets/images/portfolio/portfolio-3.jpg")}
+.slide2{background-image: url("assets/images/portfolio/portfolio-4.jpg")}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span{
+    font-size:5rem;
+    color:white;
+}
+
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    margin-top: -30px;
+    width: 0;
+    height: 0;
+    border:solid black;
+}
+
+#arrow-left{
+    border-width: 30px 40px 30px 0;
+    border-color: transparent white transparent transparent;
+    left:0;
+    margin-left:30px;
+}
+
+#arrow-right{
+    border-width: 30px 0px 30px 40px;
+    border-color: transparent white transparent transparent;
+    left:0;
+    margin-right:30px;
+}
+
+
 /* ---------------------------------- CONTAINER-------------------------------------------------- */
 .container {
     display: flex; /* or inline-flex */
@@ -8,6 +67,12 @@
 
 .symbols {
     width:150px;
+}
+
+/* ---------------------------------- NLW -------------------------------------------------- */
+#NLW {
+    padding-top:60px;
+   
 }
 
 /* ---------------------------------- TOPNAV -------------------------------------------------- */
@@ -61,7 +126,10 @@
 }
 
 /* ---------------------------------- BIO-------------------------------------------------- */
+
+
 #bio {
+    padding-top:60px;
     
 }
 #bio:after {
@@ -79,7 +147,20 @@
 #bio p {
    
 }
+
 /* ---------------------------------- PORTFOLIO -------------------------------------------------- */
+#skills {
+    padding-top:60px;
+}
+/* ---------------------------------- PORTFOLIO -------------------------------------------------- */
+.grade-img {
+    width:300px;
+}
+
+#portfolio {
+    padding-top:60px;
+}
+
 #wireframes {
     text-align: center;
     
@@ -103,7 +184,17 @@
     width:300px;
 }
 
+
 /* ---------------------------------- ACCOMPLISHMENTS-------------------------------------------------- */
+#accomplishments {
+    padding-top:60px;
+   
+}
+
+/* ---------------------------------- CONNECT -------------------------------------------------- */
+#connect {
+    padding-top:60px;
+}
 
 
 
@@ -122,95 +213,36 @@ footer p {
 /* ---------------------------------- mySlides-------------------------------------------------- */
 
 .mySlides img {
-    width:200px;
+    width:150px;
+}
+
+.mySlides {
+    width:150px;
 }
 /* ---------------------------------- HAMBURGER MENU-------------------------------------------------- */
+
+nav { position: fixed; top: 10px; right: 0; display:none; }
+		nav label { width: 250px; color:black; font-weight: bold; padding: 10px 10px 10px 10px; background-color: rgba(255,255,255,0.75);; border-radius: 10px 0 0 10px; cursor: pointer; }
+		nav input { display: none; }
+		nav section { background-color: rgba(255,255,255,0.75);; padding: 20px 20px 50px 20px; border-radius: 0 0 0 10px; position: absolute; animation: navout 0.5s forwards; }
+		nav:hover section, nav input:checked + section { animation: navin 0.5s forwards; }
+		nav section a { color:black; text-decoration: none; display: block; padding: 5px 15px 5px 5px; }
+		nav section a:hover { background-color: gold; color: black; }
+		@keyframes navin { from {right:-300px;} to {right:0;} }
+        @keyframes navout { from {right:0;} to {right:-300px;} }
+        
+@media screen and (max-width:750px) {
+    nav {
+        display:block;
+    }
+
+    #topnav a:not(:first-of-type) {
+        display:none;
+    }
+}
+
+/* ----------------------------------  image zoom-------------------------------------------------- */
 @keyframes grow {
     to { transform: scale(1.25, 1.25); }
 }
 #wireframes img:hover { z-index: 1; animation: grow 0.25s forwards; }
-
-aside {
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color: rgba(0,0,0,0.75);
-    display:none;
-}
-
-aside.active {
-    display:block;
-}
-
-aside figure {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    background-color:white;
-    padding:5px;
-    border:2px solid black;
-}
-
-aside figure a {
-    display:block;
-    margin-bottom:10px;
-}
-
-@media (max-width: 600px) {
-
-    #topnav a{
-        display:none;
-    }
-    div { 
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        animation: navout 0.5s forwards;
-     }
-    div:hover { 
-        animation: navin 0.5s forwards;
-     }
-    
-    label { 
-        display: block; 
-        width: 125px; 
-        background-color: brown; 
-        text-align: right; 
-        border-radius: 0 10px 10px 0; 
-        color: white; 
-        font-weight: bold; 
-        padding: 5px;
-     }
-    
-    label input { 
-        display: none;
-     }
-    
-    nav { 
-        background-color: brown; 
-        width: 100px; 
-        padding-bottom: 25px;
-    }
-    
-    nav a { 
-        color: gold; 
-        display: block; 
-        padding: 5px 10px; 
-        text-decoration: none; 
-    }
-    
-    nav a:hover, label input:checked + nav { 
-        color: brown; background-color: gold; }
-    
-    @keyframes navin {
-        from { left: -100px; }
-          to { left: 0; }
-    }
-    @keyframes navout {
-        from { left: 0; }
-          to { left: -100px; }
-    }
-}

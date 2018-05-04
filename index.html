@@ -14,28 +14,16 @@
                 drop nav menu -->
             </header>
 
-            <div>
-                    <label><input type="checkbox" />&#9776;</label>
-                    <nav>
-                        <a class="active" href="#home">NLW</a>
-                        <a href="#news">BIO</a>
-                        <a href="#skills">SKILLS</a>
-                        <a href="#portfolio">PORTFOLIO</a>
-                        <a href="#accomplishments">ACCOMPLISHMENTS</a>
-                        <a href="#connect">CONNECT</a>
-                    </nav>
-                </div>
-
             <div id="topnav">
                     <a class="active" href="#home">NLW</a>
-                    <a href="#news">BIO</a>
+                    <a href="#bio">BIO</a>
                     <a href="#skills">SKILLS</a>
                     <a href="#portfolio">PORTFOLIO</a>
                     <a href="#accomplishments">ACCOMPLISHMENTS</a>
                     <a href="#connect">CONNECT</a>
                 </div>
 
-            <div id="name-and-position">
+            <div id="NLW">
                 <h1>Nathaniel L. Worford</h1>
                 <h3>Front-end Developer</h3>
                 <h3>Graphic Artist</h3>
@@ -49,6 +37,33 @@
                 <!-- time-lapse-video -->
                 <!-- the making of this portfolio page -->
             </div>
+                    <div class="wrap">
+                        <div id="arrow-left" class="arrow"></div>
+                            <div id="slider">
+                                <div class="slide slide1">
+                                    <div class="slide-content">
+                                        <span>Image One</span>
+                                    </div>
+                                </div>
+
+                                <div class="slide slide2">
+                                    <div class="slide-content">
+                                        <span>Image Two</span>
+                                    </div>
+                                </div>
+
+                                <div class="slide slide3">
+                                    <div class="slide-content">
+                                        <span>Image Three</span>
+                                    </div>
+                                </div>
+                            </div>
+                        <div id="arrow-right" class="arrow"></div>
+
+                        <!-- <a href="assets/images/portfolio/portfolio-1.jpg"><img src="assets/images/portfolio/portfolio-1.jpg"></a><a href="#">Go to Project</a></figure>
+                        <a href="assets/images/portfolio/portfolio-2.jpg"><img src="assets/images/portfolio/portfolio-2.jpg"></a><a href="#">Go to Project</a></figure>
+                        <a href="assets/images/portfolio/portfolio-3.jpg"><img src="assets/images/portfolio/portfolio-3.jpg"></a><a href="#">Go to Project</a></figure> -->
+                    </div>
 
             <div id="bio">
                 <img class="symbols" src="assets/images/symbols/bio-symbol.png"  alt="BIO IMAGE">
@@ -96,7 +111,7 @@
                 <!-- skills charts, areas of expertise, currently studying  -->
             </div>
 
-            <div class="portfolio">
+            <div id="portfolio">
                 <img class="symbols" src="assets/images/symbols/portfolio-symbol.png"  alt="portfolio IMAGE">
                 <h2>PORTFOLIO</h2>
                 <!-- quote about sketching/ process of web dev -->
@@ -153,11 +168,13 @@
                 </div>  <!-- wireframes -->
 
                 <div id="homework">
-                        <img class="symbols" src="assets/images/symbols/homework-symbol.png"  alt="homework IMAGE">
+                    <img class="symbols" src="assets/images/symbols/homework-symbol.png"  alt="homework IMAGE">
                     <h3>HOMEWORK</h3>
                     <p>
-                        <img class="carousel-img" src="assets/images/hangman.png"  alt="HANGMAN GAME">
-                        <h4>HANGMAN GAME, Mandarin Chinese Style!</h4>
+                        <img class="carousel-img" src="assets/images/hangman/hangman.png"  alt="HANGMAN GAME">
+                        <img class="grade-img" src="assets/images/hangman/hangman-grade.png"  alt="HANGMAN GAME">
+                        <h3>HANGMAN GAME, Mandarin Chinese Style!</h3>
+                        <h4>(JavaScript Homework)</h4>
                             <p>Use the keyboard to guess the letters! Recieve hints! Learn Chinese characters and pronunciation! </p>
                             <a href="#">Click for Wireframe sketches</a> <br>
                             <a href="#">Click for Timelapse drawing video</a> <br>
@@ -166,8 +183,22 @@
                     </p>
 
                     <p>
-                        <img class="carousel-img" src="assets/images/triviagame.png"  alt="Vincent Van Gogh Trivia Game">
+                            <img class="carousel-img" src="assets/images/skyscraper/skyscraper.png"  alt="Skyscraper-builder Game">
+                            <img class="grade-img" src="assets/images/skyscraper/skyscraper-grade.png"  alt="Skyscraper-builder Game">
+                            <h3>Skyscraper-builder Game</h3>
+                            <h4>(jQuery Homework)</h4>
+                                <p>Build Skyscraper to the correct number of floors! Don't go over or YOU LOSE!</p>
+                                <a href="#">Click for Wireframe sketches</a> <br>
+                                <a href="#">Click for Timelapse drawing video</a> <br>
+                                <a href="https://github.com/nworford/Skyscraper-builder" target="_blank">Click for GitHub repo</a> <br>
+                                <a href="https://nworford.github.io/Skyscraper-builder/" target="_blank">Click for website</a>              
+                        </p> 
+
+                    <p>
+                        <img class="carousel-img" src="assets/images/van-gogh/van-gogh.png"  alt="Vincent Van Gogh Trivia Game">
+                        <img class="grade-img" src="assets/images/van-gogh/van-gogh-grade.png"  alt="Vincent Van Gogh Trivia Game">
                         <h4>Vincent Van Gogh Trivia Game</h4>
+                        <h3>(jQuery and JavaScript Homework)</h3>
                             <p>Test your knowledge of the great artist, Vincent Van Gogh! Learn interesting facts about his birth, life, death, and legacy. </p>
                             <a href="#">Click for Wireframe sketches</a> <br>
                             <a href="#">Click for Timelapse drawing video</a> <br>
@@ -177,13 +208,94 @@
 
                     <p>
                         <img class="carousel-img" src="assets/images/giphy.png"  alt="1990s NICKELODEON TV Shows!">
-                        <h4>1990s NICKELODEON TV Shows!</h4>
+                        <img class="grade-img" src="assets/images/giphy-grade.png"  alt="1990s NICKELODEON TV Shows!">
+                        <h3>1990s NICKELODEON TV Shows!</h3>
+                        <h4>(APIs &amp; AJAX Homework)</h4>
                             <p>Checkout GIFs from your favorite 1990s NICKELODEON TV Shows or search for any GIFs you want!</p>
                             <a href="#">Click for Wireframe sketches</a> <br>
                             <a href="#">Click for Timelapse drawing video</a> <br>
                             <a href="https://github.com/nworford/Giphy-Site" target="_blank">Click for GitHub repo</a> <br>
                             <a href="https://nworford.github.io/Giphy-Site/" target="_blank">Click for website</a>              
                     </p>
+
+                    <p>
+                        <img class="carousel-img" src="assets/images/train-scheduler/train-scheduler.png"  alt="Train Scheduler">
+                        <img class="grade-img" src="assets/images/train-scheduler/train-scheduler-grade.png"  alt="Train Scheduler">
+                        <h3>Train Scheduler</h3>
+                        <h4>(Google Firebase Homework)</h4>
+                            <p>Manage train schedules.</p>
+                            <a href="#">Click for Wireframe sketches</a> <br>
+                            <a href="https://github.com/nworford/train-activity" target="_blank">Click for GitHub repo</a> <br>
+                            <a href="https://nworford.github.io/train-activity/" target="_blank">Click for website</a>              
+                    </p>
+                    
+                    <p>
+                        <img class="carousel-img" src="assets/images/liri/liri.png"  alt="Liri Node app">
+                        <img class="grade-img" src="assets/images/liri/liri-grade.png"  alt="Liri Node app">
+                        <h3>Liri Node app</h3>
+                        <h4>(Node.js Homework)</h4>
+                            <p>Retrieve information from Twitter, Spotify, and OMDb.</p>
+                            <a href="https://github.com/nworford/liri-node-app" target="_blank">Click for GitHub repo</a> <br>
+                    </p>
+
+                    <p>
+                        <img class="carousel-img" src="assets/images/constructor-hangman/constructor-hangman.png"  alt="Constructor Hangman">
+                        <img class="grade-img" src="assets/images/constructor-hangman/constructor-hangman-grade.png"  alt="Constructor Hangman">
+                        <h3>Constructor Hangman</h3>
+                        <h4>(Advanced JavaScript Homework)</h4>
+                        <p>Play Hangman in the terminal!</p>
+                        <a href="https://github.com/nworford/constructor-hangman2" target="_blank">Click for GitHub repo</a> <br>
+                    </p> 
+                    
+                    <p>
+                        <img class="carousel-img" src="assets/images/bamazon/bamazon.png"  alt="Bamazon online store">
+                        <img class="grade-img" src="assets/images/bamazon/bamazon-grade.png"  alt="Bamazon online store">
+                        <h3>"Bamazon" online store</h3>
+                        <h4>(mySQL Homework)</h4>
+                            <p>Use the terminal to manage your own online department store!</p>
+                            <a href="https://github.com/nworford/bamazon" target="_blank">Click for GitHub repo</a> <br>
+                            <a href="https://drive.google.com/drive/my-drive" target="_blank">Click for video demo</a> <br>
+                            
+                    </p>
+
+                    <p>
+                        <img class="carousel-img" src="assets/images/friend-finder/friend-finder.png"  alt="Friend-Finder">
+                        <img class="grade-img" src="assets/images/friend-finder/friend-finder-grade.png"  alt="Friend-Finder">
+                        <h3>Friend-Finder</h3>
+                        <h4>(Express.js Homework)</h4>
+                            <p>Fill out a 10 question survey to be matched with a friend!</p>
+                            <a href="https://github.com/nworford/friend-finder" target="_blank">Click for GitHub repo</a> <br>
+                            <a href="https://stormy-basin-63109.herokuapp.com/" target="_blank">Click for Heroku deployed website</a> <br>
+                            
+                    </p> 
+
+                    <p>
+                        <img class="carousel-img" src="assets/images/web-scraper/web-scraper.png"  alt="New York Times web scraper">
+                        <img class="grade-img" src="assets/images/web-scraper/web-scraper-grade.png"  alt="New York Times web scraper">
+                        <h3>New York Times web scraper</h3>
+                        <h4>(MongoDB Homework)</h4>
+                            <p>Checkout articles from the New York Times. Save articles to read later and make notes on articles.</p>
+                            <a href="#">Click for Wireframe sketches</a> <br>
+                            <a href="#">Click for Timelapse drawing video</a> <br>
+                            <a href="https://github.com/nworford/scraper" target="_blank">Click for GitHub repo</a> <br>
+                            <a href="https://nworford.github.io/Giphy-Site/" target="_blank">Click for website</a>              
+                    </p> 
+                    
+                    <p>
+                        <img class="carousel-img" src="assets/images/clicky-game/clicky-game.png"  alt="Clicky Game">
+                        <img class="grade-img" src="assets/images/clicky-game/clicky-game-grade.png"  alt="Clicky Game">
+                        <h3>Clicky-Game</h3>
+                        <h4>(React.js Homework)</h4>
+                            <p>Click on an image to increase your score, but dont click the same image twice!</p>
+                            <a href="#">Click for Wireframe sketches</a> <br>
+                            <a href="#">Click for Timelapse drawing video</a> <br>
+                            <a href="https://github.com/nworford/clicky-game" target="_blank">Click for GitHub repo</a> <br>
+                            <a href="https://clicky-game1.herokuapp.com/" target="_blank">Click for Heroku deployed website</a> <br>        
+                    </p> 
+
+                    
+
+                    
     
                 </div>  <!-- homework -->
 
@@ -192,9 +304,13 @@
                     <img class="symbols" src="assets/images/symbols/projects-symbol.png" alt="projects image">
                     <h3>PROJECTS</h3>
                         <p>
-                            <img class="carousel-img" src="assets/images/snow-scout.png" alt="Snow-Scout">
-                            <h4>Snow Scout</h4>
+                            <img class="carousel-img" src="assets/images/snow-scout/snow-scout.png" alt="Snow-Scout">
+                            <img class="grade-img" src="assets/images/clicky-game/clicky-game-grade.png"  alt="Snow-Scout">
+                            <h3>Snow Scout</h3>
+                            <h4>(Project I)</h4>    
                                 <p>Snow Scout is an app meant to help skiers and snowboarders to select a great mountain.</p>
+                                <p>TECH USED: HTML, CSS, JavaScript, AJAX, APIs</p>
+                                <p>MY MAIN ROLE(s): Wireframe sketches, front-end design (HTML, CSS, CSS Grid Layout, JavaScript), Google Maps API</p>
                                 <a href="#">Click for Wireframe sketches</a> <br>
                                 <a href="#">Click for Timelapse drawing video</a> <br>
                                 <a href="https://github.com/JaredMHenderson/Ski-cialMedia" target="_blank">Click for GitHub repo</a> <br>
@@ -202,9 +318,13 @@
                         </p>
 
                         <p>
-                            <img class="carousel-img" src="assets/images/quickclinic.png" alt="Quickclinic">
-                            <h4>Quickclinic</h4>
+                            <img class="carousel-img" src="assets/images/quickclinic/quickclinic.png" alt="Quickclinic">
+                            <img class="grade-img" src="assets/images/quickclinic/quickclinic-grade.png"  alt="Quickclinic">
+                            <h3>Quickclinic</h3>
+                            <h4>(Project II)</h4>    
                                 <p>QuickClinic is an app for pharmacists to use to keep track of their patients and medications. Upon opening the app, the pharmacist will be given a list of recent patients, displaying their name, DOB, prescriptions, and comments. The pharmacist can add patients and prescriptions, delete patients and prescriptions, and update prescriptions.</p>
+                                <p>TECH USED: HTML, CSS, JavaScript, MongoDB</p>
+                                <p>MY MAIN ROLE(s): Google Firebase User Authentication</p>
                                 <a href="#">Click for Wireframe sketches</a> <br>
                                 <a href="#">Click for timelapse drawing video</a> <br>
                                 <a href="https://github.com/JaredMHenderson/pharma" target="_blank">Click for GitHub repo</a> <br>
@@ -212,9 +332,13 @@
                         </p>
 
                         <p>
-                            <img class="carousel-img" src="assets/images/mgr.png"  alt="MUSIC-GEAR-RAFFLE">
-                            <h4>MUSIC-GEAR-RAFFLE</h4>
+                            <img class="carousel-img" src="assets/images/mgr/mgr.png"  alt="MUSIC-GEAR-RAFFLE">
+                            <img class="grade-img" src="assets/images/mgr/mgr-grade.png"  alt="MUSIC-GEAR-RAFFLE">
+                            <h3>MUSIC-GEAR-RAFFLE</h3>
+                            <h4>(Project III)</h4>   
                                 <p>App for musicians to buy or sell musical instruments.Users can buy a ticket for a raffle of a musical instrument they are interested in or create a raffle to sell their instrument.Create a platform for musicians to buy and sell musical instruments. Provide a fun and exciting marketplace in which buyers have a chance to receive an instrument at a fraction of the normal price, and users can potentially receive more than market price for their instruments.</p>
+                                <p>TECH USED: HTML, CSS, JavaScript, React JS, MongoDB</p>
+                                <p>MY MAIN ROLE(s): Wireframe sketches, React JS, Stripe payment method</p>
                                 <a href="#">Click for Wireframe sketches</a> <br>
                                 <a href="#">Click for Timelapse drawing video</a> <br>
                                 <a href="https://github.com/JaredMHenderson/music-gear-raffle" target="_blank">Click for GitHub repo</a> <br>
@@ -239,20 +363,20 @@
 
                     <p>
                         <img class="carousel-img" src=""  alt="Bootcamp Certificate">
-                        <h4>University of Denver Web Development Coding Bootcamp Certificate</h4>
+                        <h3>University of Denver Web Development Coding Bootcamp Certificate</h3>
                             <p>Completed 24 week Full-Stack Dev Bootcamp</p>    
                     </p>
 
 
                     <p>
                         <img class="carousel-img" src="assets/images/hsk/hsk-1.jpg"  alt="HSK5 Mandarin Chinese Certificate">
-                        <h4>HSK 5 Mandarin Chinese Proficiency Test Certificate</h4>
+                        <h3>HSK 5 Mandarin Chinese Proficiency Test Certificate</h3>
                             <p>Passing grade on Mandarin Chinese Writing/Reading test on 2,000-3,000 characters</p>
                     </p>
 
                     <p>
                         <img class="carousel-img" src="assets/images/tazy.png"  alt="The Adventures of Zhui Ya">
-                        <h4>The Adventures of Zhui Ya</h4>
+                        <h3>The Adventures of Zhui Ya</h3>
                             <p>Wrote, illustrated, ran Kickstarter campaign, and self-published childrens book about Chinese Characters.</p>
                             <a href="http://www.theadventuresofzhuiya.com/" target="_blank">Click for theadventuresofzhuiya.com</a> <br>
                             <a href="https://www.kickstarter.com/projects/953621249/chinese-mandarin-characters-the-adventures-of-zhui?ref=nav_search&result=project&term=the%20adventures%20of%20zhui%20ya" target="_blank">Click for Kickstarter page</a>              
@@ -260,8 +384,8 @@
 
 
                     <p>
-                        <img class="carousel-img" nsrc="assets/images/mm.png"  alt="Mindful Max">
-                        <h4>Mindful Max</h4>
+                        <img class="carousel-img" nsrc="assets/images/mindful-max.png"  alt="Mindful Max">
+                        <h3>Mindful Max</h3>
                             <p>Wrote, illustrated, ran Kickstarter campaign, and self-published childrens book about Chinese Characters.</p>
                             <a href="https://www.mindfulmax.org/" target="_blank">Click for mindfulmax.org</a> <br>
                             <a href="https://www.kickstarter.com/projects/953621249/mindful-max-the-first-day-of-school-helping-childr">Click for Kickstarter page</a>              
@@ -269,7 +393,7 @@
 
                     <p>
                         <img class="carousel-img" src="assets/images/nathanworford.com.png"  alt="Nathan Worford">
-                        <h4>Nathan Worford, Artist</h4>
+                        <h3>Nathan Worford, Artist</h3>
                             <p>Lifelong artist. Scored 4/5 on AP Art Portfolio Review at Cherry Creek High School. Studied Fine Art at CSU Fort Collins for one year. Studied Industrial Design at Metro State College of Denver for two years. </p>
                             <a href="https://www.nathanworford.com/" target="_blank">Click for nathanworford.com</a>
                     </p>
@@ -282,7 +406,9 @@
                         </p>
                 </div>  <!-- accomplishments -->
 
+                
                 <div id="connect">
+                    <img class="symbols" src="assets/images/symbols/connect-symbol.png" alt="connect image">
                     <h2>CONNECT</h2>
                     <h2>Nathan L. Worford</h2>
                     <h3>Front-end Developer</h3>
@@ -301,19 +427,23 @@
                     
                 </div>  <!-- connect ...resume-->
                 
-                <div class="mySlides">
-                    <img src="assets/images/portfolio/portfolio-1.jpg">
-                    <img src="assets/images/portfolio/portfolio-2.jpg">
-                    <img src="assets/images/portfolio/portfolio-3.jpg">
-                    <img src="assets/images/portfolio/portfolio-4.jpg">
 
-                    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-                </div>
 
            </div>  <!-- class="grid" -->
     </div> 
-    <aside></aside>   
+    <nav>
+            <label for="hamburger_checkbox">&#9776;</label>
+            <input type="checkbox" id="hamburger_checkbox">
+            <section>
+                    <a class="active" href="#NLW">NLW</a>
+                    <a href="#bio">BIO</a>
+                    <a href="#skills">SKILLS</a>
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#accomplishments">ACCOMPLISHMENTS</a>
+                    <a href="#connect">CONNECT</a>
+            </section>
+        </nav>
+
 </body> <!-- class="container" -->
 
 <footer>
