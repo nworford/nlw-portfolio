@@ -90,11 +90,13 @@ body #slider, .wrap, .slide-content {
 
 .item-card {
     border:5px solid black;
+    padding:20px;
+    margin:20px;
 
 }
 
 .info-text {
- float:right;   
+  margin-right:0px;
 }
    
 
@@ -214,7 +216,14 @@ body #slider, .wrap, .slide-content {
 .carousel-img{
     width:300px;
 }
+/* ---------------------------------- HOMEWORK-------------------------------------------------- */
+.hangman-links a{
+    color:#7dd36b;
+}
 
+.skyscraper-links a {
+    color:#3893d8;
+}
 
 /* ---------------------------------- ACCOMPLISHMENTS-------------------------------------------------- */
 #accomplishments {
