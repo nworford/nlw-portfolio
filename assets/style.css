@@ -217,18 +217,115 @@ body #slider, .wrap, .slide-content {
     width:300px;
 }
 /* ---------------------------------- HOMEWORK-------------------------------------------------- */
-.hangman-links a{
+.hangman-links a {
     color:#7dd36b;
+    text-decoration:none;
+}
+
+.hangman-links a:hover {
+    color:black;
+    
 }
 
 .skyscraper-links a {
-    color:#3893d8;
+    color:#2c4ea4;
+    text-decoration:none;
 }
+
+.skyscraper-links a:hover {
+    color:#3ea6f1;
+}
+
+.van-gogh-links a {
+    color: #cf2b0f;
+    text-decoration: none;
+}
+
+.van-gogh-links a:hover {
+    color: #92c190;
+}
+
+.nick-links a {
+    color: #e09636;
+    text-decoration: none;
+}
+
+.nick-links a:hover {
+    color:black;
+}
+
+.clicky-links a {
+    color:#54b8f4;
+}
+
+.snow-scout-links a {
+    color:#445fa2;
+    text-decoration: none;
+}
+
+.snow-scout-links a:hover {
+    color:#9dbee1;
+}
+
+.pharma-links a {
+    color:#74bedb;
+    text-decoration: none;
+}
+
+.pharma-links a:hover {
+    color:#d0dee7;
+}
+
+.mgr-links a {
+    color:#b4413a;
+    text-decoration:none;
+}
+
+.mgr-links a:hover {
+    color:#353a3f;
+    /* text-decoration:none; */
+}
+
 
 /* ---------------------------------- ACCOMPLISHMENTS-------------------------------------------------- */
 #accomplishments {
     padding-top:60px;
-   
+}
+
+.tazy-links a {
+    color:#5272b0;
+    text-decoration:none;
+}
+
+.tazy-links a:hover {
+    color:#d7864b;
+}
+
+.mm-links a {
+    color:#9ebcc2;
+    text-decoration:none;
+}
+
+.mm-links a:hover {
+    color:#c52430;
+}
+
+.nw-links a {
+    color:#282381;
+    text-decoration:none;
+}
+
+.nw-links a:hover {
+    color:#ffdb75;
+}
+
+.i-wonder-links a {
+    color:#5994b2;
+    text-decoration:none;
+}
+
+.i-wonder-links a:hover {
+    color:#f8e3bd;
 }
 
 /* ---------------------------------- CONNECT -------------------------------------------------- */
