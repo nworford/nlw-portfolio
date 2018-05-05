@@ -1,5 +1,49 @@
 document.addEventListener("DOMContentLoaded", init);
 
+
+		
+		
+		function ez_image_scroller(){
+			Array.from(document.querySelectorAll(".ez_image_scroller")).forEach(scroller_init);
+			function scroller_init(scroller){
+				//build nav
+				scroller.innerHTML += "<nav><button>Prev</button><button>Next</button></nav>";
+				//navigation
+				scroller.querySelector("nav button:first-of-type").addEventListener("click", scroller_prev);
+				scroller.querySelector("nav button:last-of-type").addEventListener("click", scroller_next);
+				//show first slide
+				scroller.children[0].classList.add("active");
+			}
+			function scroller_prev(e){
+				var scroller = e.target;
+				while(!scroller.classList.contains("ez_image_scroller") && scroller !== document.body){
+					scroller = scroller.parentElement;
+				}
+				var curr = scroller.querySelector(".active");
+				curr.classList.remove("active");
+				if (curr.previousElementSibling){
+					curr.previousElementSibling.classList.add("active");
+				}
+				else {
+					scroller.children[scroller.children.length-2].classList.add("active");
+				}
+			}
+			function scroller_next(e){
+				var scroller = e.target;
+				while(!scroller.classList.contains("ez_image_scroller") && scroller !== document.body){
+					scroller = scroller.parentElement;
+				}
+				var curr = scroller.querySelector(".active");
+				curr.classList.remove("active");
+				if (curr.nextElementSibling !== scroller.children[scroller.children.length-1]){
+					curr.nextElementSibling.classList.add("active");
+				}
+				else {
+					scroller.children[0].classList.add("active");
+				}
+			}
+		}
+
     let sliderImages = document.querySelectorAll('.slide'),
         arrowRight = document.querySelector('#arrow-left'),
         arrowLeft = document.querySelector("#arrow-right"),
@@ -51,7 +95,7 @@ document.addEventListener("DOMContentLoaded", init);
     // -------------------------====================================
     
 function init(){	
-  	
+    ez_image_scroller();
     Array.from(document.querySelectorAll("#topnav a[href^='#'], nav section a")).forEach((anchor) => {
         anchor.addEventListener("click", function(e){
             e.preventDefault();

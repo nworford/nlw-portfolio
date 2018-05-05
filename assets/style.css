@@ -1,4 +1,36 @@
-body #slider, .wrap, .slide-content {
+/* =---------------------------- image carousel ---------------------------- */
+.ez_image_scroller { display: table; margin: 0 auto; position: relative; text-align: center; background-color: black; color: white; max-width: 100%; }
+		.ez_image_scroller * { max-width: 100%; }
+		.ez_image_scroller > * { display: none; }
+		.ez_image_scroller > .active { display: block; }
+		.ez_image_scroller > .infromright { animation: ez_image_scroller_infromright 0.5s forwards; }
+		.ez_image_scroller > .infromleft { animation: ez_image_scroller_infromleft 0.5s forwards; }
+		.ez_image_scroller > .outtoright { animation: ez_image_scroller_outtoright 0.5s forwards; }
+		.ez_image_scroller > .outtoleft { animation: ez_image_scroller_outtoleft 0.5s forwards; }
+		.ez_image_scroller > nav { display: block; }
+		.ez_image_scroller > nav button { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); }
+		.ez_image_scroller > nav button:first-of-type { left: 0; }
+		.ez_image_scroller > nav button:last-of-type { right: 0; }
+		@keyframes ez_image_scroller_infromright {
+			from { opacity: 0; transform: translateX(25%); }
+			  to { opacity: 1; transform: translateX(0); }
+		}
+		@keyframes ez_image_scroller_infromleft {
+			from { opacity: 0; transform: translateX(-25%); }
+			  to { opacity: 1; transform: translateX(0); }
+		}
+		@keyframes ez_image_scroller_outtoright {
+			from { opacity: 1; transform: translateX(0); }
+			  to { opactiy: 0; transform: translateX(25%); }
+		}
+		@keyframes ez_image_scroller_outtoleft {
+			from { opacity: 1; transform: translateX(0); }
+			  to { opactiy: 0; transform: translateX(-25%); }
+		}
+
+        /* =---------------------------- image carousel ---------------------------- */
+
+/* body #slider, .wrap, .slide-content {
     margin:0;
     padding:0;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,7 +86,7 @@ body #slider, .wrap, .slide-content {
     border-color: transparent white transparent transparent;
     left:0;
     margin-right:30px;
-}
+} */
 
 
 /* ---------------------------------- CONTAINER-------------------------------------------------- */
@@ -92,11 +124,20 @@ body #slider, .wrap, .slide-content {
     border:5px solid black;
     padding:20px;
     margin:20px;
-
+    width:80%;
 }
 
 .info-text {
   margin-right:0px;
+    display:inline-block;
+    width:48%;
+    vertical-align:top;
+}
+
+.left-side-images {
+    display:inline-block;
+    width:48%;
+    vertical-align:top;
 }
    
 
@@ -290,6 +331,7 @@ body #slider, .wrap, .slide-content {
 /* ---------------------------------- ACCOMPLISHMENTS-------------------------------------------------- */
 #accomplishments {
     padding-top:60px;
+    
 }
 
 .tazy-links a {
