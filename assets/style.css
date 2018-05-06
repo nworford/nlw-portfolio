@@ -315,7 +315,17 @@
     padding-top:60px;
 }
 
+.thumbnail {
+    width:75px;
+}
 
+.personal-sites a {
+    display:inline-block;
+}
+
+.personal-sites img {
+    display:inline-block;
+}
 
 /* ---------------------------------- FOOTER -------------------------------------------------- */
 footer {
@@ -329,15 +339,6 @@ footer p {
     padding-top:10px;
 }
 
-/* ---------------------------------- mySlides-------------------------------------------------- */
-
-.mySlides img {
-    width:150px;
-}
-
-.mySlides {
-    width:150px;
-}
 /* ---------------------------------- HAMBURGER MENU-------------------------------------------------- */
 
 nav { position: fixed; top: 10px; right: 0; display:none; }
