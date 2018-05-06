@@ -29,6 +29,9 @@
 		}
 
 /* ---------------------------------- CONTAINER-------------------------------------------------- */
+body {
+   
+}
 .container {
     display: flex; /* or inline-flex */
     margin-top: 30px;
@@ -42,6 +45,9 @@
     margin:10px;
 }
 
+.section-header {
+    background-color:white;
+}
 .section-title {
    margin-left:60px;
    
@@ -60,14 +66,15 @@
 }
 
 .item-card {
-    border:5px solid black;
+    border:2px solid black;
     padding:15px;
     margin:20px;
     width:90%;
+    border-radius: 10px;
 }
 
 .info-text {
-  margin-right:0px;
+  margin-right:5px;
     display:inline-block;
     width:48%;
     vertical-align:top;
@@ -78,6 +85,37 @@
     display:inline-block;
     width:48%;
     vertical-align:top;
+}
+
+.feature {
+    display: inline-block;
+    margin-right:0px;
+}
+
+.feature p{
+    display: inline-block;
+   
+}
+
+#feature-text {
+    position: relative;
+    font-family: "impact";
+    padding-top:0;
+    vertical-align: top;
+
+}
+
+.thumbnail {
+    width:75px;
+}
+
+.star {
+    width:50px;
+    display:inline-block;
+}
+
+.star-ranking {
+    
 }
    
 
@@ -164,8 +202,12 @@
     padding-top:60px;
 }
 /* ---------------------------------- PORTFOLIO -------------------------------------------------- */
+.carousel-img{
+    width:90%;
+}
+
 .grade-img {
-    width:300px;
+    width:90%;
     
 }
 
@@ -194,9 +236,7 @@
 }
 
 
-.carousel-img{
-    width:300px;
-}
+
 /* ---------------------------------- HOMEWORK-------------------------------------------------- */
 .hangman-links a {
     color:#7dd36b;
@@ -315,10 +355,6 @@
     padding-top:60px;
 }
 
-.thumbnail {
-    width:75px;
-}
-
 .personal-sites a {
     display:inline-block;
 }
@@ -370,7 +406,7 @@ nav { position: fixed; top: 10px; right: 0; display:none; }
 /* ----------------------------------  item card media querries-------------------------------------------------- */
 @media screen and (max-width:750px){
     .item-card {
-        border:5px solid black;
+        border:2px solid black;
         padding:15px;
         margin:20px;
         width:90%;
