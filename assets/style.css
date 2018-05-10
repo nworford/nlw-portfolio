@@ -1,5 +1,35 @@
+aside {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 5;   
+}
+
+aside.active {
+    display: block;
+}
+
+aside > figure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100vh;
+} 
+
+aside > figure * {
+    max-width: 100%;
+}
+
 /* =---------------------------- image carousel ---------------------------- */
-.ez_image_scroller { display: table; margin: 0 auto; position: relative; text-align: center; width: 80%;}
+.ez_image_scroller { display: table; margin: 0 auto; position: relative; width: 100%;}
 		.ez_image_scroller * { max-width: 100%; }
 		.ez_image_scroller > * { display: none; }
 		.ez_image_scroller > .active { display: block; }
@@ -7,10 +37,10 @@
 		.ez_image_scroller > .infromleft { animation: ez_image_scroller_infromleft 0.5s forwards; }
 		.ez_image_scroller > .outtoright { animation: ez_image_scroller_outtoright 0.5s forwards; }
 		.ez_image_scroller > .outtoleft { animation: ez_image_scroller_outtoleft 0.5s forwards; }
-		.ez_image_scroller > nav { display: block; }
-		.ez_image_scroller > nav button { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); }
-		.ez_image_scroller > nav button:first-of-type { left: 0; }
-		.ez_image_scroller > nav button:last-of-type { right: 0; }
+		.ez_image_scroller > nav { display: block; position:static;}
+		.ez_image_scroller > nav button { cursor: pointer; position: absolute; bottom:-10; transform: translateY(-50%); margin-bottom:10px;}
+		.ez_image_scroller > nav button:first-of-type { right: 50%; width:40px; height:40px; border:none; }
+		.ez_image_scroller > nav button:last-of-type { left: 50%; width:40px; height:40px; border:none; }
 		@keyframes ez_image_scroller_infromright {
 			from { opacity: 0; transform: translateX(25%); }
 			  to { opacity: 1; transform: translateX(0); }
@@ -35,8 +65,8 @@ body {
 .container {
     display: flex; /* or inline-flex */
     margin-top: 30px;
-    margin-left:50px;
-    margin-right:50px;
+    margin-left:5%;
+    margin-right:5%;
   }
 
 .symbols {
@@ -57,34 +87,38 @@ body {
     width:100%;
     height:8px;
     background-color:black;
+    /* margin-top:10px; NOT WORKING*/
 }
 
 .thin-hr {
     width:100%;
     height:4px;
     background-color:black;
+    /* margin-top:10px; NOT WORKING*/
 }
 
 .item-card {
     border:2px solid black;
     padding:15px;
     margin:20px;
-    width:90%;
+    width:85%;
     border-radius: 10px;
+    margin-left:5%;
 }
 
 .info-text {
   margin-right:5px;
     display:inline-block;
-    width:48%;
+    width:38%;
     vertical-align:top;
     padding:10px;
 }
 
 .left-side-images {
     display:inline-block;
-    width:48%;
+    width:58%;
     vertical-align:top;
+    height:33%;
 }
 
 .feature {
@@ -110,12 +144,21 @@ body {
 }
 
 .star {
-    width:50px;
+    width:30px;
     display:inline-block;
+}
+
+.feature-star {
+    width:50px;
 }
 
 .star-ranking {
     
+}
+
+.currently {
+    color: rgb(170, 3, 3);
+    margin-left: 20px;
 }
    
 
@@ -138,6 +181,7 @@ body {
 
 /* Style the links inside the navigation bar */
 #topnav a {
+    
     color:black;
     text-align: center;
     padding: 14px 16px;
@@ -178,7 +222,7 @@ body {
 
 /* ---------------------------------- BIO-------------------------------------------------- */
 #bio {
-    padding-top:60px;
+    padding-top:45px;
     
 }
 #bio:after {
@@ -196,23 +240,31 @@ body {
 #bio p {
    
 }
+/* ---------------------------------- SKILLS -------------------------------------------------- */
+#skills {
+    display:block;
+    padding-top: 45px;
+}
+
+.left {
+    display:inline-block;
+    margin-right: 30%;
+}
+.right {
+    display:inline-block;
+    vertical-align: top; 
+}
 
 /* ---------------------------------- PORTFOLIO -------------------------------------------------- */
-#skills {
-    padding-top:60px;
-}
-/* ---------------------------------- PORTFOLIO -------------------------------------------------- */
-.carousel-img{
-    width:90%;
-}
 
 .grade-img {
-    width:90%;
+    width:50%;
+    margin-top: 20px;
     
 }
 
 #portfolio {
-    padding-top:60px;
+    padding-top: 45px;
 }
 
 #wireframes {
@@ -310,7 +362,7 @@ body {
 
 /* ---------------------------------- ACCOMPLISHMENTS-------------------------------------------------- */
 #accomplishments {
-    padding-top:60px;
+    padding-top: 45px;
     
 }
 
@@ -352,16 +404,74 @@ body {
 
 /* ---------------------------------- CONNECT -------------------------------------------------- */
 #connect {
-    padding-top:60px;
+    padding-top: 45px;
 }
 
-.personal-sites a {
+.connect-left {
     display:inline-block;
+    width:45%;
+    vertical-align:top;
+    margin-left:2%;
+    
 }
 
-.personal-sites img {
-    display:inline-block;
+
+#resume-thumbnail {
+    width:125px;
 }
+
+#resume-text {
+
+}
+
+.my-accounts-thumbnail {
+    display: inline-block;
+    width:75px;
+
+}
+
+.connect-right {
+    margin-right:5px;
+      display:inline-block;
+      width:45%;
+      vertical-align:top;
+      padding:10px;
+      
+  }
+
+  .my-personal-websites{
+      display: block;
+      width:100%;
+  }
+
+  .websites-thumbnail {
+      width:100px;
+      display: inline-block;
+      margin:10px;
+  }
+
+  .website-info {
+    vertical-align: top;
+    /* width:40%; */
+    display:inline-block;
+    
+    width:50%;
+}
+
+  .site-card    {
+      border: 2px solid black;
+      display: inline-block;
+      width:100%;
+      margin-bottom:5px;
+  }
+
+  /* .site-card div{
+    border: 5px;
+    display: inline-block;
+    width:100%; */
+
+
+
 
 /* ---------------------------------- FOOTER -------------------------------------------------- */
 footer {
@@ -408,21 +518,33 @@ nav { position: fixed; top: 10px; right: 0; display:none; }
     .item-card {
         border:2px solid black;
         padding:15px;
-        margin:20px;
+        margin:10px;
         width:90%;
     }
     
     .info-text {
       margin-right:0px;
         display:inline-block;
-        width:90%;
+        width:100%;
         vertical-align:top;
         padding:10px;
     }
     
     .left-side-images {
         display:inline-block;
-        width:90%;
+        width:100%;
         vertical-align:top;
+    }
+
+    .connect-left {
+        width:100%;
+    }
+
+    .connect-right {
+        width:100%;
+    }
+
+    .my-personal-websites{
+        width:100%;
     }
 }

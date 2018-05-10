@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", init);
 			Array.from(document.querySelectorAll(".ez_image_scroller")).forEach(scroller_init);
 			function scroller_init(scroller){
 				//build nav
-				scroller.innerHTML += "<nav><button>Prev</button><button>Next</button></nav>";
+				scroller.innerHTML += "<nav><button>&#9664;</button><button>&#9654;</button></nav>";
 				//navigation
 				scroller.querySelector("nav button:first-of-type").addEventListener("click", scroller_prev);
 				scroller.querySelector("nav button:last-of-type").addEventListener("click", scroller_next);
@@ -44,54 +44,54 @@ document.addEventListener("DOMContentLoaded", init);
 			}
 		}
 
-    let sliderImages = document.querySelectorAll('.slide'),
-        arrowRight = document.querySelector('#arrow-left'),
-        arrowLeft = document.querySelector("#arrow-right"),
-        current = 0;
+    // let sliderImages = document.querySelectorAll('.slide'),
+    //     arrowRight = document.querySelector('#arrow-left'),
+    //     arrowLeft = document.querySelector("#arrow-right"),
+    //     current = 0;
 
-    // Clear all images
-    function reset(){
-        for(let i = 0; i < sliderImages.length; i ++){
-            sliderImages[i].style.display = "none";
-        }
-    }
+    // // Clear all images
+    // function reset(){
+    //     for(let i = 0; i < sliderImages.length; i ++){
+    //         sliderImages[i].style.display = "none";
+    //     }
+    // }
 
-    //Init slider
-    function startSlide(){
-        reset();
-        sliderImages[0].style.display = "block"
-    }
+    // //Init slider
+    // function startSlide(){
+    //     reset();
+    //     sliderImages[0].style.display = "block"
+    // }
 
-    //show prev
-    function slideLeft(){
-        reset();
-        sliderImages[current - 1].style.display = "block";
-        current--;
-    }
+    // //show prev
+    // function slideLeft(){
+    //     reset();
+    //     sliderImages[current - 1].style.display = "block";
+    //     current--;
+    // }
 
-    //Show next
-    function slideRight(){
-        reset();
-        sliderImages[current + 1].style.display = "block";
-        current++;
-    }
-    //Left arrow click
-    arrowLeft.addEventListener("click", function(){
-        if(current === 0){
-            current = sliderImages.length;
-        }
-        slideLeft();
-    });
+    // //Show next
+    // function slideRight(){
+    //     reset();
+    //     sliderImages[current + 1].style.display = "block";
+    //     current++;
+    // }
+    // //Left arrow click
+    // arrowLeft.addEventListener("click", function(){
+    //     if(current === 0){
+    //         current = sliderImages.length;
+    //     }
+    //     slideLeft();
+    // });
 
-    //Right arrow click
-    arrowRight.addEventListener("click", function(){
-        if(current === sliderImages.length - 1){
-            current = -1;
-        }
-        slideRight();
-    });
+    // //Right arrow click
+    // arrowRight.addEventListener("click", function(){
+    //     if(current === sliderImages.length - 1){
+    //         current = -1;
+    //     }
+    //     slideRight();
+    // });
 
-    startSlide();
+    // startSlide();
     // -------------------------====================================
     
 function init(){	
@@ -104,19 +104,30 @@ function init(){
         });
     });
   
-    Array.from(document.querySelectorAll("#wireframe figure a[href^='assets']")).forEach((anchor)=> {
+    Array.from(document.querySelectorAll("#wireframes figure a[href*='assets']")).forEach((anchor)=> {
         anchor.href="#";
         anchor.addEventListener("click", function(e){
             e.preventDefault();
-            var figure = e.target.parentElement.outerHTML.slice(0);
+            var figure = e.target;
+            while(figure.tagName.toLowerCase()!=="figure"){
+                figure = figure.parentElement;
+            }
+            figure = figure.outerHTML.slice(0);
+            console.log(figure);
             var aside = document.querySelector("aside");
             aside.innerHTML = figure;
             aside.className = "active";
+            console.log(aside);
         });
     });
 
-    document.querySelector("aside").addEventListener("click", (e) => {
-        e.target.className = "";
+    var aside = document.querySelector("aside");
+    aside.addEventListener("click", (e) => {
+        // var aside = e.target;
+        // while(aside.tagName.toLowerCase !== "aside"){
+        
+        aside.className = "";
+
     });
 }
 
@@ -158,22 +169,22 @@ function smoothscroll(elem, ease=0.1){
 }
 
 //-------------------------- carousel --------------------------
-var slideIndex = 1;
-showDivs(slideIndex);
+// var slideIndex = 1;
+// showDivs(slideIndex);
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
+// function plusDivs(n) {
+//     showDivs(slideIndex += n);
+// }
 
-function showDivs(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    console.log("button clicked");
-    if (n > slides.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = slides.length} ;
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    }
-    slides[slideIndex-1].style.display = "block"; 
-}
+// function showDivs(n) {
+//     var i;
+//     var slides = document.getElementsByClassName("mySlides");
+//     console.log("button clicked");
+//     if (n > slides.length) {slideIndex = 1} 
+//     if (n < 1) {slideIndex = slides.length} ;
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none"; 
+//     }
+//     slides[slideIndex-1].style.display = "block"; 
+// }
 
