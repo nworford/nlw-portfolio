@@ -37,10 +37,10 @@ aside > figure * {
 		.ez_image_scroller > .infromleft { animation: ez_image_scroller_infromleft 0.5s forwards; }
 		.ez_image_scroller > .outtoright { animation: ez_image_scroller_outtoright 0.5s forwards; }
 		.ez_image_scroller > .outtoleft { animation: ez_image_scroller_outtoleft 0.5s forwards; }
-		.ez_image_scroller > nav { display: block; position:static;}
-		.ez_image_scroller > nav button { cursor: pointer; position: absolute; bottom:-10; transform: translateY(-50%); margin-bottom:10px;}
-		.ez_image_scroller > nav button:first-of-type { right: 50%; width:40px; height:40px; border:none; }
-		.ez_image_scroller > nav button:last-of-type { left: 50%; width:40px; height:40px; border:none; }
+		.ez_image_scroller > nav { text-align:center; display: block; position:static;}
+		.ez_image_scroller > nav button { }
+		.ez_image_scroller > nav button:first-of-type {  }
+		.ez_image_scroller > nav button:last-of-type {  }
 		@keyframes ez_image_scroller_infromright {
 			from { opacity: 0; transform: translateX(25%); }
 			  to { opacity: 1; transform: translateX(0); }
@@ -101,7 +101,8 @@ body {
     border:2px solid black;
     padding:15px;
     margin:20px;
-    width:85%;
+    width:90%;
+    /* height:100%; */
     border-radius: 10px;
     margin-left:5%;
 }
@@ -118,8 +119,10 @@ body {
     display:inline-block;
     width:58%;
     vertical-align:top;
-    height:33%;
+    border:4px solid black;
 }
+
+
 
 .feature {
     display: inline-block;
@@ -235,6 +238,7 @@ body {
     width:250px;
     float:left;
     margin-right:20px;
+    margin-left:5%;
 }
 
 #bio p {
@@ -514,26 +518,27 @@ nav { position: fixed; top: 10px; right: 0; display:none; }
 #wireframes img:hover { z-index: 1; animation: grow 0.25s forwards; }
 
 /* ----------------------------------  item card media querries-------------------------------------------------- */
-@media screen and (max-width:750px){
+@media screen and (max-width:1000px){
     .item-card {
         border:2px solid black;
         padding:15px;
         margin:10px;
         width:90%;
+        /* height:100%; */
     }
     
     .info-text {
       margin-right:0px;
-        display:inline-block;
+        display:block;
         width:100%;
-        vertical-align:top;
+        vertical-align: top;
         padding:10px;
     }
     
     .left-side-images {
-        display:inline-block;
+        display:block;
         width:100%;
-        vertical-align:top;
+        vertical-align: top;
     }
 
     .connect-left {
