@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", init);
 		function ez_image_scroller(){
 			Array.from(document.querySelectorAll(".ez_image_scroller")).forEach(scroller_init);
 			function scroller_init(scroller){
-                //build nav
-                
+				//build nav
 				scroller.innerHTML += "<nav><button>&#9664;</button><button>&#9654;</button></nav>";
 				//navigation
 				scroller.querySelector("nav button:first-of-type").addEventListener("click", scroller_prev);
@@ -188,4 +187,3 @@ function smoothscroll(elem, ease=0.1){
 //     }
 //     slides[slideIndex-1].style.display = "block"; 
 // }
-
